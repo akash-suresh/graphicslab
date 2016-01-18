@@ -1,7 +1,8 @@
 #include <graphics.h>
 
 int main(){
-	int gd = DETECT,gm,X0,X1,Y0,Y1,dx,dy,Steps,x,y,Xincrement,Yincrement,v;
+	int gd = DETECT,gm,X0,X1,Y0,Y1,dx,dy,Steps,v;
+	float x,y,Xincrement,Yincrement;
 	
 	printf("Enter the first coordinate - ");
 	scanf("%d%d",&X0,&Y0);
@@ -18,8 +19,8 @@ int main(){
 		Steps = abs(dy);
 	}
 
-	Xincrement = dx / Steps;
-	Yincrement = dy / Steps;
+	Xincrement = dx / (float)Steps;
+	Yincrement = dy / (float)Steps;
 	
 	//INITITALIZING GRAPH
 	initgraph(&gd,&gm,NULL);
