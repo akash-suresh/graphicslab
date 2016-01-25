@@ -1,11 +1,18 @@
 #include <graphics.h>
 
 
+
 void drawLine(int X0, int Y0, int X1, int Y1){
 	putpixel(X0,Y0,RED);
 	int dx = X1-X0, dy = Y1-Y0;
-	int p0 = 2*dy - dx, x, y,p=p0,xk,pk,yk;
+	int p0 = 2*dy - dx, x, y,p=p0,xk,pk,yk,v;
 	float m = (dy/(float)dx);
+	if(dx==0){
+		for(x=X0,y=Y0;y<=Y1;y++){
+			putpixel(x,y,RED);
+		}
+		return;
+	}
 	y=Y0;
 	for(x=X0;x<X1;x++){
 		xk = x+1;
