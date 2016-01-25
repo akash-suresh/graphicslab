@@ -67,11 +67,32 @@ int main(){
 	//body
 	drawLine(80,120,80,250);
 	//hands
-	drawLine(80,160,140,240);
-	drawLine(20,240,80,160);
+	drawLine(80,160,140,220);
+	drawLine(20,220,80,160);
 	//legs
 	drawLine(80,250,140,330);
 	drawLine(20,330,80,250);
+
+	//head
+	drawcircle(80+120,70,50);
+	//body
+	drawLine(80+120,120,80+120,250);
+	//hands
+	drawLine(20+120,160,140+120,160);
+	//legs
+	drawLine(80+120,250,140+120,330);
+	drawLine(20+120,330,80+120,250);
+
+	//head
+	drawcircle(80+240,70,50);
+	//body
+	drawLine(80+240,120,80+240,250);
+	//hands
+	drawLine(20+240,120,80+240,160);
+	drawLine(80+240,160,140+240,120);
+	//legs
+	drawLine(80+240,250,140+240,330);
+	drawLine(20+240,330,80+240,250);
 
 	delay(100000);
 	closegraph();
