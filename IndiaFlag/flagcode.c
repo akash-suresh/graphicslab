@@ -55,6 +55,28 @@ void Circle(int x, int y, int R){
 		}
 	}
 }
+
+void DrawPolarCircle(int xc,int yc,int r)
+{
+
+
+   float dtheta,theta=0;
+   int x,y; 
+   
+   x=r;
+   y=0;
+   
+   dtheta=1.0/r;
+   drawcircle(xc,yc,x,y);
+   while(x>y)
+   {
+      theta+=dtheta;
+      x=round(r*cos(theta));
+      y=round(r*sin(theta));
+      drawcircle(xc,yc,x,y);
+   }
+      
+}
 int main(){
 	int gd = DETECT, gm;
 	initgraph(&gd,&gm,NULL);
@@ -64,8 +86,8 @@ int main(){
 		drawLine(x,y+100+i,x+length, y+100+i, WHITE);
 		drawLine(x,y+200+i,x+length, y+200+i, GREEN);
 	}
-	Circle(length/2,150,50);
-	Circle(length/2,150,49);
+	DrawPolarCircle(length/2,150,50);
+	DrawPolarCircle(length/2,150,49);
 	float val = PI / 180.0;
 	for(i=0;i<24;i++){
 		x = (int)50*(cos(val*i*360/24.0));
