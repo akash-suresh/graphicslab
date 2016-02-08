@@ -126,6 +126,8 @@ void cycle(int x, int y, float scale, float angle){
 	color = RED;
 	//body
 	drawLine(x+52,y+115, x+85,y+55,color,scale,angle);
+	drawLine(x+53,y+115, x+86,y+55,color,scale,angle);
+	drawLine(x+54,y+115, x+87,y+55,color,scale,angle);
 	//head
 	Circle(x+100,y+30,25,color,scale,angle);
 	Circle(x+100,y+30,24,color,scale,angle);
@@ -145,7 +147,7 @@ int main(){
 	int gd = DETECT, gm;
 	initgraph(&gd,&gm,NULL);
 
-	int x = 300, y= 200,i,angle;
+	int x = 100, y= 350,i,angle;
 
 	//code for moving cycle
 	for(i=0;i<100;i++){
@@ -156,5 +158,6 @@ int main(){
 
 	delay(100000);
 	closegraph();
+
 	return 0;
 }

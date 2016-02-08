@@ -72,22 +72,22 @@ int main(){
 			cleardevice();
 			pentagon(x+3*i,y,1,0);
 			delay(35);
-			break;
 		}
+		break;
 
 		case 2:for(i=0;i<100;i++){
 			cleardevice();
 			pentagon(x,y,1,i/80.0);
 			delay(35);
-			break;
 		}
+		break;
 
 		case 3:for(i=0;i<100;i++){
 			cleardevice();
 			pentagon(x+3*i,y,(100+i)/100.0,0);
 			delay(35);
-			break;
 		}
+		break;
 	}
 
 	delay(100000000);
