@@ -26,7 +26,7 @@ drawCube(int x, int y, int x1, int y1, float angle){
 	int points5[]={x,y,x1,y1,x1+100,y1,x+100,y,x,y};
 	int points6[]={x,y+100,x1,y1+100,x1+100,y1+100,x+100,y+100,x,y+100};
 
-
+	setlinestyle(3,2,3);
 	setcolor(RED);
 	fillpoly(5, points1);
 
@@ -40,10 +40,10 @@ drawCube(int x, int y, int x1, int y1, float angle){
 	fillpoly(5, points4);
 
 	setcolor(12);
-	fillpoly(5, points3);
+	fillpoly(5, points5);
 
 	setcolor(GREEN);
-	fillpoly(5, points4);
+	fillpoly(5, points6);
 
 
 }
